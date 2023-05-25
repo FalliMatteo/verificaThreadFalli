@@ -4,7 +4,7 @@ public class Semaforo
 
     public Semaforo()
     {
-        valore = 2;
+        valore = 1;
     }
 
     public synchronized void P()
