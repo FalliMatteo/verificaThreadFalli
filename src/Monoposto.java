@@ -4,7 +4,13 @@ public class Monoposto extends Thread
     private static Box box = new Box(1);
     private int id;
     private String scuderia;
-
+    
+    /**
+     * @param id da associare alla monoposto
+     * @param scuderia a cui appartiene la monoposto
+     * @param pilota che guida la monoposto
+     * Il metodo crea un oggetto della classe Monoposto
+     */
     public Monoposto(int id, String scuderia, String pilota)
     {
         super(pilota);
@@ -12,6 +18,11 @@ public class Monoposto extends Thread
         this.scuderia = scuderia;
     }
 
+    /**
+     * Il metodo fa partire la monoposto, facendogli compiere 10 giri di pista.
+     * Ogni 3 giri di pista una monoposto deve effettuare un pit-stop utilizzando la box.
+     * La box può ospitare due sole monoposto per volta;
+     */
     @Override
     public void run()
     {
